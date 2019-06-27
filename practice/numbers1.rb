@@ -47,8 +47,6 @@ while !(number1.is_a? Integer and number1 > 0)  do
     number1 = gets.chomp.to_i
 end
 
-
-
 puts "Enter second number!"
 number2 = gets.chomp
 puts "Enter third number!"
@@ -59,7 +57,6 @@ puts "Here are the numbers you selected:"
 output = ""
 my_number = number1.to_s + ", "+ number2.to_s + ", "+ number3.to_s
 puts my_number
-
 
 #get the user numbers and convert to integers and add 20
 puts "Twenty added to your numbers gives us:"

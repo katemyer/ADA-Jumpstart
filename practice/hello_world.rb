@@ -93,7 +93,8 @@ puts ""
 puts "Compound Assignment Statements"
 x = 10
 y = 5
-puts "x=#{x}", "y=#{y}"
+puts "x=#{x}", "y=#{y}" #x=10, y=5
+
 x += 3 # assigns the value of x + 3 to the variable x
        # x = x + 3
 puts "x=#{x}", "y=#{y}"
