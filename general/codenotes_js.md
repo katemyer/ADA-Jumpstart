@@ -55,6 +55,9 @@ Example: 123456
 ## 09 Comments, Data Types, Math Operators, Keyboard Inputs, Strings
 
 <https://github.com/Ada-Developers-Academy/jump-start/tree/master/learning-to-code/grammar>
+ <http://ruby.bastardsbook.com/chapters/strings/>
+ - escape commands \ tells Ruby that the character after is a special character
+    -- example: charlie \n's tells Ruby to take it literal "Charlie's" rather than thinking that 's is another string 
 
 ### Data Types
 
@@ -115,3 +118,8 @@ Math Operators: +,-,*,/, % remainder
 -Git: lets group of people work on same document at the same time.
 -Git version control: the version control keeps track of changes that the group made just like track changes in word document
 -Github: cloud where gits are stored
+
+## .class command
+-<http://ruby.bastardsbook.com/chapters/strings/>
+-typing charlie.class or 42.class will tell you what kind of class the item is. 
+-- number, string "", float, etc.

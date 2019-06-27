@@ -22,67 +22,96 @@
 # Thanks for purchasing candy through us.
 # Please take your candy, and your $0.25 change!
 
+puts "Welcome to Ada Developers \nAcademy\'s Computer Candy Machine!"
+puts ""
+puts "How much money do ya got?"
 
-puts "Welcome to Ada Developers Academy's Computer Candy Machine!"
-print "How much money do ya got?"
-money = gets.chomp.to_f
+#user inputs cash amont, make it a float
+user_money = gets.chomp.to_f.round(2)
 
-puts "#{money}, that's all?"
-print "Well, lemme tell ya what we got here."
+#put a check here to make sure it's a positive integer. set to float and round to 2
 
-# letter1 = "A $0.65 Twix"
-# letter2 = "B $0.50 Chips"
-# letter3 = "C $0.75 Nutter Butter"
-# letter4 = "D $0.65 Peanut Butter Cup"
-# letter5 = "E $0.55 Juicy Fruit Gum"
+#use WHILE LOOP evaluates a boolean, True or False.
+#while booloean is true where  <0, then enter loop
+#if boolean is false where cash does not <0, then eit and moves on
+#example below
+
+# x = gets.chomp.to_i
+# while x >= 0
+#   puts x
+#   x -= 1 # <- refactored this line
+# end
+# puts "Done!"
+
+#use a WHILE statement
+#if user inputs money less than 0 or words/letters, then please enter valid dollar
+#otherwise end and displays next statement
+#example below
+
+# while !(number1.is_a? Integer and number1 > 0)
+#    #prompt for user for new number
+#     puts "Enter Another number!"
+#     number1 = gets.chomp.to_i
+# end
+
+while user_money <= 0
+  puts "Please enter a valid dollar amount:"
+  user_money = gets.chomp.to_f.round(2)
+end
+
+#print prints one line at a time
+print "\n$ #{user_money}" "\nThat\'s all? Let's take a look at the menu!\n"
 
 puts ""
-puts "Today's Selections"
-puts "A $0.65 Twix"
-puts "B $0.50 Chips"
-puts "C $0.75 Nutter Butter"
-puts "D $0.65 Peanut Butter Cup"
-puts "E $0.55 Juicy Fruit Gum"
 
+#display the items on the menu
+#assign value (dollar) to key (A-E) in the hash 
+#use HASH bc need to assign a value to the label (A-E) & order matters
+#this is called the HASH MAP. use "key" => "value"
 
-puts "So, What'll ya have?"
-letter1 = gets.chomp
-if letter1 == "a" || letter1 == "A"
-    if money >= 0.65 
-        change = money - 0.65
-        puts "Enjoy your Twix! Your change is #{change}"
-    else
-        puts "You don't have enough money."
-    end
+#usings single quote is literal, 'A' = a or A. not a string
+candy_price_hash = 
+{'A' => 0.65, 'B' => 0.50, 'C' => 0.75, 'D' => 0.65, 'E' => 0.55}
 
-elsif letter1 == "b" || letter1 == "B"
-    if money >= 0.50
-        change = money - 0.50
-        puts "Enjoy your chips! Your change is #{change}"
-    else
-        puts "Sucks to be you."
-    end
+#now need to assign name of candy to key (A-E) with prices
+#example: : hash = { bacon: "protein", apple: "fruit" }
+#set the key to all uppercase in case user inputs lowercase
 
-elsif letter1 == "c" || letter1 == "C"
-    if money >= 0.75
-        change = money - 0.75
-        puts "Nutter Butter! Your change is #{change}"
-    else
-         puts "Too bad. So sad." 
-    end
+puts "~~~ADA's Candy Menu~~~~"
+puts ""
+##{} indicates order of operation, stuff inside{} gets eval first
+# A twix = user_candy is the selection of A-E
+# user candy price = A
+puts "A Twix: $ #{candy_price_hash["A"]}" 
+puts "B Chips: $ #{candy_price_hash["B"]}"
+puts "C Nutter Butter: $ #{candy_price_hash["C"]}"
+puts "D Peanut Butter Cup: $ #{candy_price_hash["D"]}"
+puts "E Juicy Fruit: $ #{candy_price_hash["E"]}"
+puts ""
 
-elseif letter1 == "d" || letter1 == "D"
-    if money >= 0.65
-        change = money - 0.65
-        puts "Peanut Better Jelly Peanut Butter! Your change is #{change}"
-    else
-        puts "Don't be Jelly!"
+#ask user to input their candy choice
+puts "What will you have?"
+user_candy = gets.chomp.capitalize # A B C D
 
-elseif letter1 == "e" || letter1 == "E"
-    if money >= 0.55
-        change = money - 0.55
-        puts "Juicy Fruit is gonna move ya! Your change is #{change}"
-    else
-        puts "Another sticky situation, ey?" 
-    end
+#check that is a valid key enter ....loop command use WHILE to compare T/F
+#comparing string boolean, need to use nil not 0
+#user candy does not equal to right letter selection
+
+while candy_price_hash[user_candy] == nil #candy price that user selected is not valid then enter loop below
+  puts "Please enter a valid candy selection:"
+  user_candy = gets.chomp.capitalize
+end
+
+#check that the user amount is more than the candy amount, otherwise end with your broke
+#if user cash is more than amount the enter loop to gives the change, round to 2, and thank you msg
+#user cash less than user candy AND candy price
+
+#saving variables already selected
+selected_price = candy_price_hash[user_candy]
+
+if user_money < selected_price #if cash is less than price of candy
+    puts "That's a no from me, dawg."
+else #have enough money
+    puts "Great choice! Here's your change $#{user_money - selected_price}!"
+    puts "Come back soon!"
 end

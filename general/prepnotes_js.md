@@ -14,8 +14,7 @@ Program:
 Computer programmer: writing code
 Developer: leadership, career building, inclusivity in addition to programming
 
-
-00 Social Justice
+## 00 Social Justice
 Introduction to social justice
 Start by reviewing our glossary of social justice terms.
 Institutional racism: places giving biased treatment to a group of people based on race (usc-ish)
@@ -24,7 +23,7 @@ Microaggression: slight snubs based on marginalized membership
 Microresistance: observe, think, feel, desire what happens to combat microaggressions
 
 Then read and reflect on these articles
-#FFFFFF Diversity by Erica Joy
+-FFFFFF Diversity by Erica Joy
 Black woman in tech (Google). Their version of diversity was just “women” and the majority of them are white. White privilege, lacking in “women” of “color” in tech = white feminism in tech.
 Aside from black and brown, there are asians who make up 30% of tech and they are the “model minority”
 What Being Non-Binary in Female-Centric Spaces Is Like – And How to Be More Inclusive by Sam Escobar
@@ -47,14 +46,14 @@ Microaggressions are not explicitly defined in Rockquemore's article. Based on t
 Making assumptions on someone based on their appearance then verbalizing. “Do you speak English? Are you ghetto?” Or statements that try to be funny at the expense at someone else’s existence.
 Teach the future how not to be the way we are. Teaching being aware and present, think before you speak.
 
-01 Learning Styles
-VARK (Neil Fleming)
+##01 Learning Styles
+-VARK (Neil Fleming)
 Visual: graphs, charts, symbols replaced with important words, color coordination (bullet journal)
 Auditory: hearing lectures, speaking out loud concepts, explain notes
 Reading/Writing: lists, words, diaries, organize ideas into statements, note takers
 Kinesthetic: learn by doing/experiencing, use pictures to illustrate ideas
 
-How Successful People Stay Calm, on Forbes
+-How Successful People Stay Calm, on Forbes
 Dr. Travis Bradberry (Emotional Intelligence 2.0)
 90% of top performers skilled @ managing their emotions in times of stress 
 well-honed coping strategies lowers stress levels regardless of environment, ensuring stress is intermittent and not prolonged.
@@ -73,23 +72,25 @@ Breathe
 Use Support system, ask for help
 Learning Styles and Strategies, on NC State University
 Adapting lectures to students learnings styles
-02 Program Solving
 
-Algorithms:
+##02 Program Solving
+
+-Algorithms:
 Input: initial state with input values
 Output: results using input values
 Finiteness: start and stop, includes time limits
 Definiteness: precise and unambiguous # of iterations
 Effectiveness: sufficiently simple
 
-Optional reading: What’s a good test case?
+-Optional reading: What’s a good test case?
 Ability to test and retest but shows improvement for developers by finding bugs, helps companies max shipments, establishes low risks for lawsuits and errors, finds defects.
 Results from test cases should be powerful, yield significant findings thus more credible, representative and informative
 
-Watch the Driverless Car Hits the Street - Not People (2008) and think about why writing instructions for computers might be different than writing instructions for humans.
+-Watch the Driverless Car Hits the Street - Not People (2008) and think about why writing instructions for computers might be different than writing instructions for humans.
 Autonomous driving for computers lacks emotion which affects human driving. We don’t have to take into account mood, sleep, stress, life events that distract from driving. In computers, it can be more straightfoward. Inputs and outputs are more black and white. 
 Robots don’t think like humans nor do they function like humans. Everything has to be programmed. 
-Then watch The 2015 DARPA Robotics Challenge Finals (2015), a more recent video and think about what the computer scientists writing code for these robots have to think about. What inputs do they have? What is their intended output? How are their algorithms considered Definite, Effective, and Finite?
+
+-Then watch The 2015 DARPA Robotics Challenge Finals (2015), a more recent video and think about what the computer scientists writing code for these robots have to think about. What inputs do they have? What is their intended output? How are their algorithms considered Definite, Effective, and Finite?
 Input: dirt road, valve, doors, use a drill, stairs
 Output: turn value, open door, 
 Algorithm: don’t fall over, keep balance.
@@ -98,7 +99,7 @@ Finite: time limits to do the tasks
 
 
 
-Case 1: Make a PBJ Sandwich
+##Case 1: Make a PBJ Sandwich
 
 Input: 
 If Bread/Peanut Butter/Jelly/butter knife/spoon/plate=0
@@ -134,7 +135,7 @@ Repeat steps 1-11 for more peanut butter and jelly sandwiches
 
 
 
-PREPARING TO CODE
+#PREPARING TO CODE
 
 03 Effective Internet Searching
 Learning how to find the answers vs knowing the answers. Independent learning.
@@ -153,7 +154,7 @@ A Google A day
 Learning now to use the google search
 
 
-04 macOS Keyboard navigation
+#04 macOS Keyboard navigation
 
 What the command does
 Mac shortcut
@@ -184,7 +185,7 @@ Control + command + F
 User-defined region screen shot
 Shift + command + 4
 
-05 ADA Programming Languages
+#05 ADA Programming Languages
 Compiled: 
 converted to BINARY, low level (C, C++, Java)
 statically typed programming language does type checking at compile time
@@ -205,7 +206,7 @@ ReactJS
 Javascript for building user interfaces. 
 
 
-06 Terminal
+#06 Terminal
 Learn the Command Line: https://www.codecademy.com/learn/learn-the-command-line
 Folder Setup Practice: done. Look for “terminal” using command+space
 
