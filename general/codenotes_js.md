@@ -1,5 +1,11 @@
 # Notes
 
+OBJECT = some THING (car, house, animal)
+CLASS = attributes or behaviors of an OBJECT (color, weight, model, blueprint of the house)
+METHOD = object's behavior and this depends on the class
+    -to call a method, use DOT
+    - example: dog.color or dog.weight. Using dog.kind? will tell you the value (kind) of dog if the information is in the library of kind
+
 # 07 Environment Setup
 
 ## Setting up Dev Environment
@@ -57,7 +63,13 @@ Example: 123456
 <https://github.com/Ada-Developers-Academy/jump-start/tree/master/learning-to-code/grammar>
  <http://ruby.bastardsbook.com/chapters/strings/>
  - escape commands \ tells Ruby that the character after is a special character
-    -- example: charlie \n's tells Ruby to take it literal "Charlie's" rather than thinking that 's is another string 
+    -- example: charlie \'s tells Ruby to take it literal "Charlie's" rather than thinking that 's is another string 
+        -- puts "Charlie\'s favorite toy is a monkey." => Charlie's favorite toy is a monkey
+    -- using /n*NO SPACE* literally moves the word to the next line
+        --puts "Charlie\'s favorite \ntoy is \na \nmonkey'" 
+            => Charlie's favorite
+            toy is 
+            a monkey
 
 ### Data Types
 
@@ -111,6 +123,9 @@ Math Operators: +,-,*,/, % remainder
 ## 11 Iterators
 ## 12 Arrays
 ## 13 Hashes
+
+- shortcuts for hashes
+<https://codeburst.io/ruby-shortcuts-pulling-info-from-hashes-values-keys-1d6ba0256b2d>
 
 ## Git Version Control and Github
 
