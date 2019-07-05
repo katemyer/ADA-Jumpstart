@@ -1,6 +1,6 @@
 # Learning-Ruby
 
-All Jumpstart assignments live here.
+All Jumpstart assignments live in this folder under practice.
 
 
 ## Info about Ruby, websites, pdfs
