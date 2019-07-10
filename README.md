@@ -1,11 +1,15 @@
 # Learning-Ruby
-# Info about Ruby, websites, pdfs
+
+All Jumpstart assignments live in this folder under practice.
+
+
+## Info about Ruby, websites, pdfs
 
 https://ruby.github.io/TryRuby/
 
 http://ruby-for-beginners.rubymonstas.org/index.html
 
 
-# Mark Down Notes
+## Mark Down Notes
 
 https://www.markdownguide.org/basic-syntax/
