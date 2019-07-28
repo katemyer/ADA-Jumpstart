@@ -4,7 +4,7 @@ require 'csv'
   land_data = []
 
   CSV.foreach(data_file, headers: true) do |row|
-    land_data.push(row.to_h) # hash
+    land_data.push(row.to_h) # to_h = hash
   end
 
 #   print land_data
@@ -59,10 +59,20 @@ end
 user_option = gets.chomp.to_i
 puts options_hash[user_option]
 
+while user_option > options_hash.length || user_option <= 0
+    puts "Select a valid option"
+    user_option = gets.chomp.to_i
+end
+
 #instead of specifically year 2012, let the user input the year
 #make sure to change numbers to INTS bc csv is all string
 puts "What year do you want to see the state with the most #{options_hash[user_option]}?"
 user_year = gets.chomp.to_i
+
+while user_year <= 1900 # this covers if they input string, negative year, or year less than 1900
+    puts "Try again."
+    user_year = gets.chomp.to_i
+end
 
 current_greatest_land = 0
 current_greatest_state = ""
@@ -85,6 +95,96 @@ if (current_greatest_land == 0) && (current_greatest_state == "")
 else #everything else. in this it means there was data. 
     puts "#{current_greatest_state} has the most #{options_hash[user_option]} of #{current_greatest_land}"
 end
+
+puts "Question 2: In the year 1945, amongst the states in the Mountain region, which state made the least contribution to its region's cropland use for pasture?"
+
+# year = 1945
+# Region = mountain region
+# least contribution
+# Cropland used for pasture
+# output : Nevada
+
+puts "What year do you want Cropland used for pasture information?"
+user_crop_year = gets.chomp.to_i
+
+while user_crop_year <= 1900 
+    puts "Enter a valid year"
+    user_crop_year = gets.chomp.to_i
+end
+
+least_Cropland_used_for_pasture = nil
+least_state_record = nil 
+
+land_data.each do |record|
+    if (record["Year"].to_i == user_crop_year) && (record["Region"] == "Mountain") 
+        #compare first record of Cropland used for pasture to next, and so on
+        if least_Cropland_used_for_pasture == nil
+            least_Cropland_used_for_pasture = record["Cropland used for pasture"].to_i
+        end
+        if record["Cropland used for pasture"].to_i < least_Cropland_used_for_pasture
+            least_Cropland_used_for_pasture = record["Cropland used for pasture"].to_i
+            least_state_record = record
+        end    
+    end
+end
+
+if least_Cropland_used_for_pasture == nil || least_state_record == nil
+    puts "No data exists"
+else
+    puts " #{least_state_record["Region or State"]} made the least contribution in Cropland used for pasture with a total of #{least_state_record["Cropland used for pasture"]}."
+end
+
+puts "Question 3: Among the states that begin with N, which state had less than 100 in land in urban areas/
+for at least 5 years between 1950 and 2000?"
+
+#begins with N : (record["Region or State"].start_with?("N"))
+#state < 100 in Land in urban areas : (record["Land in urban areas"].to_i < 100)
+# least 5 years : 
+#between 1950-2000 : (record["Year"].to_i == (1950...2000)
+
+state_count_hash = {}
+# {
+# }
+
+land_data.each do |record|
+    if (record["Region or State"].start_with?("N")) && 
+        (record["Region or State"] != "Northeast") && 
+        (record["Region or State"] != "Northern Plains") && 
+        (record["Land in urban areas"].to_i < 100) &&
+        (record["Year"].to_i >= 1950) && 
+        (record["Year"].to_i <= 2000)
+        puts "here #{record["Region or State"]}"
+        if state_count_hash.key?(record["Region or State"]) # does exist, increment count
+            state_count_hash[record["Region or State"]] +=1
+        else # does not exist, set count to one
+            state_count_hash[record["Region or State"]] =1
+        end  
+    end
+end
+puts state_count_hash
+# Loop thru hash and eleminate states with less than 5 counts
+
+states = []
+state_count_hash.each do |key, value|
+    if value >= 5
+       states.push(key) 
+    end
+end
+
+if !states.empty?
+    puts "States are: "
+    states.each do |state|
+        puts state
+    end    
+else
+    puts "No states exist"
+end
+
+# North Dakota, Nevada
+# puts states = []
+# Nevada
+
+
 
 
 
