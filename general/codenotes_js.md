@@ -138,3 +138,38 @@ Math Operators: +,-,*,/, % remainder
 -<http://ruby.bastardsbook.com/chapters/strings/>
 -typing charlie.class or 42.class will tell you what kind of class the item is. 
 -- number, string "", float, etc.
+
+# CSV references
+
+http://jtrudell.github.io/blog/csv_files/
+
+https://stackoverflow.com/questions/14199784/convert-csv-file-into-array-of-hashes
+
+https://technicalpickles.com/posts/parsing-csv-with-ruby
+
+# GitHub References
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/00-programming-fundamentals/git-diff-pull-and-merge.md
+
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/00-programming-fundamentals/managing-git-branches.md
+
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/00-programming-fundamentals/git-merge-conflicts.md
+
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/00-programming-fundamentals/exercises/git-pull-requests.md
+
+# Data Structures: Arrays and Hashes
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/01-ruby-fundamentals/data-structures.md (reviewed)
+
+# Loop Worksheet
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/01-ruby-fundamentals/exercises/loop-table-worksheet.md (reviewed)
+
+# While Loop Worksheet
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/01-ruby-fundamentals/exercises/while-worksheet.md (reviewed)
+
+#Conditional Practice
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/01-ruby-fundamentals/exercises/conditionals.md
+
+#Data Transformation Worksheet
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/01-ruby-fundamentals/exercises/data-transformation-worksheet.md
+
+#Water Waves Admissions Program
+https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/01-ruby-fundamentals/exercises/admissions-program.md

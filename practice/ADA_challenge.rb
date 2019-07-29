@@ -184,7 +184,9 @@ end
 # puts states = []
 # Nevada
 
+puts "Question 4: In the year 1969, amongst the states in the Northeast, Northern Plains, and Appalachian regions, what was the median value for grassland pasture and range?"
 
+puts "Question 5: Consider the top 10 best overall ranked states according to the U.S. News in the year 2017. Amongst these states, what was the average value of all special uses of land in these states in the year 2007?"
 
 
 
