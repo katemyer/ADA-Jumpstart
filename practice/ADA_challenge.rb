@@ -107,6 +107,7 @@ puts "Question 2: In the year 1945, amongst the states in the Mountain region, w
 puts "What year do you want Cropland used for pasture information?"
 user_crop_year = gets.chomp.to_i
 
+#check for valid year
 while user_crop_year <= 1900 
     puts "Enter a valid year"
     user_crop_year = gets.chomp.to_i
@@ -162,7 +163,7 @@ land_data.each do |record|
     end
 end
 puts state_count_hash
-# Loop thru hash and eleminate states with less than 5 counts
+# Loop thru hash and eliminate states with less than 5 counts
 
 states = []
 state_count_hash.each do |key, value|
@@ -185,8 +186,47 @@ end
 # Nevada
 
 puts "Question 4: In the year 1969, amongst the states in the Northeast, Northern Plains, and Appalachian regions, what was the median value for grassland pasture and range?"
+# year 1969
+# states (Region or State) in Region: Northeast, Northern Plains, Appalachian 
+# median value
+#Grassland pasture and range
 
-puts "Question 5: Consider the top 10 best overall ranked states according to the U.S. News in the year 2017. Amongst these states, what was the average value of all special uses of land in these states in the year 2007?"
+grass_array = []
+
+land_data.each do |record|
+    if (record["Year"].to_i == 1969) && (
+        (record["Region"] == "Northeast") ||
+        (record["Region"] == "Northern Plains") ||
+        (record["Region"] == "Appalachian") )
+        grass_array.push(record["Grassland pasture and range"].to_i)
+    end
+end
+
+# array of values = Grassland pasture and range
+# take an array of the values and sort them 
+# then find out how many values there are. 
+# if odd number of values = length +1
+# if even number of values = find middle two numbers and divide by 2
+
+grass_array = grass_array.sort
+#puts grass_array
+#puts grass_array.length
+median = nil
+
+if grass_array.length % 2 == 0 # length is even
+    first_index = grass_array.length / 2
+    #puts first_index
+    #puts grass_array[first_index - 1]
+    second_index = first_index + 1
+    #puts second_index
+    median = (grass_array[first_index - 1] + grass_array[second_index - 1]) / 2
+    #puts median
+else #length is odd 
+    #puts (grass_array.length / 2) + 1
+    median = grass_array[(grass_array.length / 2) + 1]
+end
+
+puts "The median for grassland pasture and range is #{median}."
 
 
 
