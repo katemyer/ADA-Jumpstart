@@ -228,5 +228,58 @@ end
 
 puts "The median for grassland pasture and range is #{median}."
 
+#initialize array/hash
+#access array/hash
+#add or delete from array/hash
+#zero based for math
+
+puts "Question 5: Consider the top 10 best overall ranked states according to the U.S. News in the year 2017. Amongst these states, what was the average value of all special uses in land in these states in the year 2007."
+
+# look up US news report for top 10 states in 2017
+# filter out these states using OR
+# filter out the year 2007
+# select All special uses of land
+# for loop through the values in special uses in land to add each value
+# divide by array length to get the average
+
+# "Region or State": Massachusetts, New Hampshire, Minnesota, North Dakota, Washington, Iowa, Utah, Maryland, Colorado, Vermont
+
+#states_array = []
+#states_array = ["Massachusetts", "New Hampshire", "Minnesota", "North Dakota", "Washington", "Iowa", "Utah", "Maryland", "Colorado", "Vermont"]
+#puts states_array.length 
+
+special_land_array = []
+
+land_data.each do |record|
+    if  (record["Year"].to_i == 2007) && (
+        (record["Region or State"] == "Massachusetts") ||
+        (record["Region or State"] == "New Hampshire") ||
+        (record["Region or State"] == "Minnesota") ||
+        (record["Region or State"] == "North Dakota") ||
+        (record["Region or State"] == "Washington") ||
+        (record["Region or State"] == "Iowa") ||
+        (record["Region or State"] == "Utah") ||
+        (record["Region or State"] == "Maryland") ||
+        (record["Region or State"] == "Colorado") ||
+        (record["Region or State"] == "Vermont")
+        )
+        special_land_array.push(record["All special uses of land"].to_i)
+    end
+end
+puts special_land_array
+
+#calculate total here
+
+total = 0
+special_land_array.each_with_index do |a_value, index|
+total = total + a_value
+end
+puts total
+
+#calculate mean here
+
+mean = 0
+mean = total / special_land_array.length
+puts "The average value of all special uses in land in 2007 for the top 10 states based on U.S. News is #{mean}."
 
 
