@@ -32,6 +32,9 @@ puts ""
 
 puts "Question 1: Which state had the most forest-use land grazed in 2012?"
 
+    #Test this out in excel to see what the answer would be. Next, figure out what data structure we are looking at, ie hash, array. In this case it is a hash. the key is the columns for each variable we need to look at. Filter out forest use land grazed and year. We then loop through the record to determine what state has the most forest land use.  This requires doing a DO loop. Inside this DO loop, we do a check that is an IF statement to set our filters. We create a hash where the key is the state and the value is the forest land use. In order to determine the most forest land use, we will compare the data of the first value to the next value. Then compare the next value to the previous value until we reach the highest value. Each time one value is largest, that gets saved to a variable we created called "current greatest land value". 
+
+
 # Check if land gazed is the current greatest
 # Check if land gazed is greater than the current champ
 # If so then have a new champ
@@ -98,6 +101,8 @@ end
 
 puts "Question 2: In the year 1945, amongst the states in the Mountain region, which state made the least contribution to its region's cropland use for pasture?"
 
+    #Filter the year, set it to an integer since all the data will be read as strings. Filter out the region. We do a DO loop for the record and inside this DO loop, we are checking statements by using IF statements. 
+
 # year = 1945
 # Region = mountain region
 # least contribution
@@ -137,6 +142,8 @@ end
 
 puts "Question 3: Among the states that begin with N, which state had less than 100 in land in urban areas/
 for at least 5 years between 1950 and 2000?"
+
+    #Filter the variables we need to look at based on the question. Then create a hash with a key and value to identify the key: states and value: data in land in urban areas. Because we are looking a value of 5 years between 1950 and 2000, we need to determine a count. This is an IF statement checking if the state (key) has land in urban areas less than 100, if yes, we start to increment (start the count). Next, we create a hash with key: states, value: land use to LOOP through and see which states have less than five years and the ones that have more than five years, we save into the hash that contains the key: state and value: land usage that we created. 
 
 #begins with N : (record["Region or State"].start_with?("N"))
 #state < 100 in Land in urban areas : (record["Land in urban areas"].to_i < 100)
@@ -186,6 +193,8 @@ end
 # Nevada
 
 puts "Question 4: In the year 1969, amongst the states in the Northeast, Northern Plains, and Appalachian regions, what was the median value for grassland pasture and range?"
+
+    #
 # year 1969
 # states (Region or State) in Region: Northeast, Northern Plains, Appalachian 
 # median value
@@ -281,5 +290,3 @@ puts total
 mean = 0
 mean = total / special_land_array.length
 puts "The average value of all special uses in land in 2007 for the top 10 states based on U.S. News is #{mean}."
-
-
